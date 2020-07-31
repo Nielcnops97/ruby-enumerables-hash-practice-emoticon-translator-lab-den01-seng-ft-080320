@@ -29,7 +29,7 @@ end
 def get_english_meaning(file, jap_emoji)
   
   emoticons = load_library(file)
-  emoticons.each do | meaning, symbols |
+  emoticons.each do | mood, symbols |
     
     if emoticons[:japanese] == jap_emoji
       return emoticons[mood]
