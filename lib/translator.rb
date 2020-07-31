@@ -26,13 +26,13 @@ def get_japanese_emoticon(file, eng_emoji)
    return "Sorry, that emoticon was not found" 
 end
 
-def get_english_meaning(file, eng_emoji)
+def get_english_meaning(file, jap_emoji)
   
   emoticons = load_library(file)
-  emoticons.each do | mood, symbols |
+  emoticons.each do | meaning, symbols |
     
-    if emoticons[mood][:japanese] == eng_emoji
-      return emoticons[mood][:english]
+    if emoticons[mood][:japanese] == jap_emoji
+      return meaning[mood][:english]
       
     end
   end
